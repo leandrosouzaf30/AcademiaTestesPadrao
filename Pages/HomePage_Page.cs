@@ -35,7 +35,6 @@ namespace AcademiaTestePadra.Pages
 
         public IWebElement linkItem()
         {
-            //Precisa melhorar esse XPath
             return driver.FindElement(By.XPath("//h5/a[contains(., 'Blouse')]"));
         }
 
@@ -236,7 +235,18 @@ namespace AcademiaTestePadra.Pages
             return driver.FindElement(By.Id("submitAccount"));
         }
 
-        
+        //Pagamento
+        public IWebElement linkBankWire()
+        {
+            return driver.FindElement(By.XPath("//a[contains(., 'Pay by bank wire')]"));
+        }
+
+        //Confirmar compra
+        public IWebElement btnconfirmOrder()
+        {
+
+            return driver.FindElement(By.XPath("//button[contains(., 'I confirm my order')]"));
+        }
 
     }
 }
